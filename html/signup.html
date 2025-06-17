@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaydol - Hızlı Kargo</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <a href="../index.html" class="auth-logo"><i class="fa-solid fa-truck-fast"></i> Hızlı Kargo</a>
+        <div class="auth-box">
+            <h2>Hesap Oluştur</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="firstName">Adınız</label>
+                    <input type="text" id="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Soyadınız</label>
+                    <input type="text" id="lastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresi</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="referral">Referans Kodu (İsteğe Bağlı)</label>
+                    <input type="text" id="referral" placeholder="Arkadaşınızın kodu">
+                </div>
+                <button type="submit" class="submit-btn">Kaydol</button>
+            </form>
+            <div id="form-message"></div>
+            <p class="redirect-link">Zaten hesabınız var mı? <a href="login.html">Giriş Yapın</a></p>
+        </div>
+    </div>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Değişkenler ve Ortak Stiller */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --container-width: 1100px;
+    --header-height: 70px;
+    --border-color: #dee2e6;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+main {
+    padding-top: var(--header-height);
+}
+
+
+/* Header, Navigasyon ve Footer (Ortak) */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: var(--header-height);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    flex-shrink: 0;
+}
+
+header .logo i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li a {
+    padding: 10px 15px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Auth Butonları (Ortak) */
+.auth-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.auth-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.auth-btn.login {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.auth-btn.login:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.auth-btn.signup {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.auth-btn.logout {
+    background-color: var(--error-color);
+    border-color: var(--error-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.welcome-user {
+    font-weight: 600;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+
+/* -------------------------------- */
+/* İletişim Sayfasına Özel Stiller */
+/* -------------------------------- */
+
+.page-content {
+    padding: 40px;
+    background-color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px;
+    text-align: center;
+}
+
+.separator {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+#contact-form {
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.submit-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Form Durum Mesajları */
+#form-status {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.form-status-success {
+    background-color: #e9f7ef;
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.form-status-error {
+    background-color: #fbe9e9;
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+/* Mobil Uyum (Responsive) */
+@media (max-width: 992px) {
+    header .container {
+        flex-wrap: wrap;
+    }
+    header nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+/* Profil Butonu Stili */
+.auth-btn.profile {
+    background-color: transparent;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auth-btn.profile:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}

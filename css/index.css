@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --container-width: 1100px;
+    --header-height: 70px;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --error-color: #dc3545;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background-color: var(--background-color); color: var(--text-color); line-height: 1.6; }
+.container { max-width: var(--container-width); margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: var(--primary-color); }
+.hidden { display: none !important; }
+main { padding-top: var(--header-height); }
+
+header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); height: var(--header-height); position: fixed; width: 100%; top: 0; z-index: 1000; }
+header .container { display: flex; justify-content: space-between; align-items: center; height: 100%; }
+header .logo { font-size: 1.5rem; font-weight: 700; color: var(--text-color); flex-shrink: 0; }
+header .logo i { margin-right: 8px; color: var(--primary-color); }
+header nav { flex-grow: 1; display: flex; justify-content: center; }
+header nav ul { list-style: none; display: flex; }
+header nav ul li a { padding: 10px 15px; color: var(--secondary-color); font-weight: 600; transition: color 0.3s; }
+header nav ul li a:hover, header nav ul li a.active { color: var(--primary-color); }
+footer { background-color: #333; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
+
+#tracking-hero { background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1576759313262-63e225883589?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEzfHxsb2dpc3RpY3N8ZW58MHx8fHwxNjE2NTk0OTI0&ixlib=rb-1.2.1&q=80&w=1920) no-repeat center center/cover; color: #fff; text-align: center; padding: 100px 0; }
+#tracking-hero h1 { font-size: 3rem; margin-bottom: 10px; }
+#tracking-hero p { font-size: 1.2rem; margin-bottom: 30px; }
+#tracking-form { display: flex; justify-content: center; max-width: 600px; margin: 0 auto; }
+#tracking-form input { width: 100%; padding: 15px; font-size: 1rem; border: none; border-radius: 5px 0 0 5px; }
+#tracking-form button { padding: 15px 30px; font-size: 1rem; font-weight: 600; background-color: var(--primary-color); color: #fff; border: none; cursor: pointer; border-radius: 0 5px 5px 0; transition: background-color 0.3s; }
+#tracking-form button:hover { background-color: #0056b3; }
+#results-section { padding: 60px 0; }
+#result-title { text-align: center; margin-bottom: 20px; font-size: 2rem; }
+
+.tracking-summary { max-width: 700px; margin: 0 auto 40px auto; background-color: #fff; border-radius: 8px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 5px solid var(--primary-color); display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.summary-item { display: flex; flex-direction: column; }
+.summary-item strong { font-size: 0.9rem; color: var(--secondary-color); margin-bottom: 4px; }
+.summary-item span { font-weight: 600; }
+.summary-item .status-teslim-edildi { color: var(--success-color); }
+.summary-item .status-yolda { color: var(--info-color); }
+.summary-item .status-hazırlanıyor { color: var(--warning-color); }
+
+.timeline { position: relative; max-width: 700px; margin: 0 auto; }
+.timeline::after { content: ''; position: absolute; width: 4px; background-color: #ddd; top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+.timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; }
+.timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; background-color: white; border: 4px solid var(--primary-color); top: 20px; border-radius: 50%; z-index: 1; }
+.timeline-item:nth-child(odd)::after { right: -10px; }
+.timeline-item:nth-child(even)::after { left: -10px; }
+.timeline-content { padding: 20px; background-color: #fff; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.timeline-content h3 { font-size: 1.1rem; color: var(--primary-color); }
+.timeline-content h3 i { margin-right: 10px; }
+.timeline-content .time { font-size: 0.9rem; color: var(--secondary-color); margin-bottom: 5px; }
+.timeline-item.delivered .timeline-content h3 { color: var(--success-color); }
+.timeline-item.delivered::after { border-color: var(--success-color); }
+
+#loader { border: 8px solid #f3f3f3; border-radius: 50%; border-top: 8px solid var(--primary-color); width: 60px; height: 60px; animation: spin 1s linear infinite; margin: 20px auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+.auth-buttons-container { display: flex; align-items: center; gap: 10px; }
+.auth-btn { padding: 8px 16px; border: 1px solid var(--primary-color); border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; white-space: nowrap; }
+.auth-btn.login { background-color: transparent; color: var(--primary-color); }
+.auth-btn.login:hover { background-color: var(--primary-color); color: #fff; }
+.auth-btn.signup { background-color: var(--primary-color); color: #fff; }
+.auth-btn.logout { background-color: var(--error-color); border-color: var(--error-color); color: #fff; cursor: pointer; }
+.welcome-user { font-weight: 600; margin-right: 10px; white-space: nowrap; }
+
+@media (max-width: 992px) {
+    header .container { flex-wrap: wrap; }
+    header nav { order: 3; width: 100%; justify-content: center; margin-top: 10px; }
+}
+@media (max-width: 768px) {
+    .tracking-summary { grid-template-columns: 1fr; }
+    .timeline::after { left: 15px; }
+    .timeline-item { width: 100%; padding-left: 50px; padding-right: 15px; }
+    .timeline-item:nth-child(odd), .timeline-item:nth-child(even) { left: 0; text-align: left; }
+    .timeline-item::after { left: 5px; }
+}
+/* Profil Butonu Stili */
+.auth-btn.profile {
+    background-color: transparent;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.auth-btn.profile:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}

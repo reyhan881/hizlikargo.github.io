@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kargo Takip Sistemi</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-truck-fast"></i> Hızlı Kargo
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="html/hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="html/hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="html/kampanyalar.html">Kampanyalar</a></li>
+                    <li><a href="html/fiyat-hesapla.html">Fiyat Hesapla</a></li>
+                    <li><a href="html/sss.html">SSS</a></li>
+                    <li><a href="html/iletisim.html">İletişim</a></li>
+                    <li><a href="html/sepet.html" class="cart-icon-link"><i class="fa-solid fa-cart-shopping"></i> <span id="cart-item-count" class="cart-item-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div id="auth-buttons" class="auth-buttons-container">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="tracking-hero">
+            <div class="container">
+                <h1>Kargonuz Nerede?</h1>
+                <p>Gönderi takip numaranızı girerek kargonuzun durumunu anında öğrenin.</p>
+                <form id="tracking-form">
+                    <input type="text" id="tracking-number" placeholder="Kargo Takip Numaranızı Girin (örn: ABC12345)" required>
+                    <button type="submit">SORGULA</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="results-section" class="hidden">
+            <div class="container">
+                <h2 id="result-title"></h2>
+                <div id="loader" class="hidden"></div>
+                <div id="tracking-result">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hızlı Kargo. Tüm hakları saklıdır.</p>
+            
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

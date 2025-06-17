@@ -1,0 +1,132 @@
+/* Personel paneli için temel stiller. auth.css'ten ilham alınmıştır. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+:root { --primary-color: #007bff; /*...diğer renkler...*/ --error-color: #dc3545; }
+body { font-family: 'Poppins', sans-serif; background-color: #f4f7f6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+header { background-color: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 0 20px; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+header .logo { font-size: 1.5rem; font-weight: 700; color: #333; text-decoration: none; }
+header .logo i { color: var(--primary-color); }
+.auth-btn.logout { background-color: var(--error-color); border-color: var(--error-color); color: #fff; cursor: pointer; padding: 8px 16px; border-radius: 5px; font-weight: 600; }
+main h1 { margin-bottom: 20px; }
+.panel-section { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin-bottom: 30px; }
+
+/* Kargo Tablosu */
+.cargo-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.cargo-table .table-header, .cargo-table .table-row { display: grid; grid-template-columns: 1fr 1.5fr 1.5fr 1fr 1fr; gap: 10px; padding: 12px 0; border-bottom: 1px solid #eee; align-items: center; }
+.cargo-table .table-header { font-weight: 600; background-color: #f8f8f8; border-bottom: 2px solid var(--primary-color); }
+.cargo-table .table-cell { padding: 8px; text-align: center; }
+.cargo-table .table-cell:first-child { text-align: left; }
+
+.cargo-table .status-text {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+/* Durum renkleri */
+.status-text.Hazırlanıyor { background-color: #fff3cd; color: #856404; } /* Sarı */
+.status-text.Teslim_Edildi { background-color: #d4edda; color: #155724; } /* Yeşil */
+.status-text.Dağıtımda { background-color: #d1ecf1; color: #0c5460; } /* Mavi */
+.status-text.Transfer_Merkezinde { background-color: #f8d7da; color: #721c24; } /* Kırmızı (örnek, farklı bir renk de olabilir) */
+.status-text.Kargo_Kabul_Edildi { background-color: #e2e3e5; color: #383d41; } /* Gri */
+
+
+/* Buton stilleri */
+.action-buttons button { background-color: var(--primary-color); color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease; font-size: 0.9rem; }
+.action-buttons button:hover { background-color: #0056b3; }
+.action-buttons .delete-btn { background-color: var(--error-color); margin-left: 5px; }
+.action-buttons .delete-btn:hover { background-color: #c82333; }
+
+/* Modal Stilleri */
+.modal { display: flex; justify-content: center; align-items: center; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
+.modal-content { background-color: #fefefe; margin: auto; padding: 30px; border: 1px solid #888; width: 90%; max-width: 600px; border-radius: 10px; position: relative; box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+.close-modal { color: #aaa; float: right; font-size: 28px; font-weight: bold; position: absolute; right: 20px; top: 10px; cursor: pointer; }
+.close-modal:hover, .close-modal:focus { color: black; text-decoration: none; cursor: pointer; }
+#modal-body { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+#modal-body p { margin-bottom: 10px; }
+#modal-body strong { color: var(--primary-color); }
+#update-status-form { display: flex; flex-direction: column; gap: 15px; }
+#update-status-form h3 { margin-bottom: 10px; color: #333; }
+#update-status-form input, #update-status-form select, #update-status-form button { padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+#update-status-form button { background: var(--primary-color); color: white; cursor: pointer; }
+.status-item { background-color: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+.status-item i { color: var(--primary-color); }
+.status-item.delivered { background-color: #e9f7ef; }
+.status-item.delivered i { color: #28a745; }
+
+/* Yeni Kargo Ekle Formu */
+.add-cargo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+.add-cargo-form input,
+.add-cargo-form button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.add-cargo-form button {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.add-cargo-form button:hover {
+    background-color: #0056b3;
+}
+.hidden { display: none !important; }
+
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .cargo-table .table-header, .cargo-table .table-row {
+        display: block;
+        border: 1px solid #eee;
+        margin-bottom: 10px;
+    }
+    .cargo-table .table-cell {
+        display: block;
+        border-bottom: none;
+        padding: 8px 12px;
+        text-align: left;
+    }
+    .cargo-table .table-cell:last-child {
+        border-bottom: none;
+    }
+    .cargo-table .table-header {
+        display: none; /* Mobil görünümde başlıkları gizle */
+    }
+    .cargo-table .table-row {
+        margin-bottom: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .cargo-table .table-cell::before {
+        content: attr(data-label);
+        font-weight: 600;
+        display: inline-block;
+        width: 100px; /* Label genişliği */
+        margin-right: 10px;
+    }
+    .action-buttons {
+        text-align: right;
+        padding-top: 10px;
+        border-top: 1px solid #eee;
+        margin-top: 10px;
+    }
+    .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Girişi - Hızlı Kargo</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <a href="../index.html" class="auth-logo"><i class="fa-solid fa-user-shield"></i> Personel Paneli</a>
+        <div class="auth-box">
+            <h2>Personel Girişi</h2>
+            <form id="personel-login-form">
+                <div class="form-group">
+                    <label for="username">Kullanıcı Adı</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Giriş Yap</button>
+            </form>
+            <div id="form-message"></div>
+        </div>
+    </div>
+    <script src="../js/personel-login.js"></script>
+</body>
+</html>

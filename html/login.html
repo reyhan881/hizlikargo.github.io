@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Hızlı Kargo</title>
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="auth-container">
+        <a href="../index.html" class="auth-logo"><i class="fa-solid fa-truck-fast"></i> Hızlı Kargo</a>
+        <div class="auth-box">
+            <h2>Giriş Yap</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">E-posta Adresi</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="submit-btn">Giriş Yap</button>
+            </form>
+            <div id="form-message"></div>
+            <p class="redirect-link">Hesabınız yok mu? <a href="signup.html">Kaydolun</a></p>
+            <p class="redirect-link">Personel misiniz? <a href="personel-login.html">Personel Girişi</a></p>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personel Paneli - Hızlı Kargo</title>
+    <link rel="stylesheet" href="../css/personel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="personel.html" class="logo"><i class="fa-solid fa-user-shield"></i> Personel Paneli</a>
+            <div class="header-actions">
+                <span id="staff-welcome"></span>
+                <button id="logout-btn" class="auth-btn logout">Çıkış Yap</button>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <h1>Kargo Yönetimi</h1>
+        <div class="panel-section">
+            <h2>Tüm Kargolar</h2>
+            <div id="cargo-list" class="cargo-table">
+                </div>
+        </div>
+        
+        <div class="panel-section">
+            <button id="toggle-add-form-btn" class="submit-btn" style="background-color: #28a745;">Yeni Kargo Ekle</button>
+            <form id="add-cargo-form" class="hidden">
+                <h3>Yeni Kargo Oluştur</h3>
+                <input type="text" id="new-tracking-id" placeholder="Takip Numarası (örn: XYZ98765)" required>
+                <input type="text" id="new-sender-name" placeholder="Gönderici Adı Soyadı" required>
+                <input type="text" id="new-from" placeholder="Çıkış Konumu (örn: İstanbul)" required>
+                <input type="text" id="new-receiver-name" placeholder="Alıcı Adı Soyadı" required>
+                <input type="text" id="new-to" placeholder="Hedef Konum (örn: Ankara)" required>
+                <input type="number" id="new-weight" placeholder="Ağırlık (kg)" step="0.1" required>
+                <button type="submit">Kargo Oluştur</button>
+            </form>
+        </div>
+
+    </main>
+    
+    <div id="update-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Kargo Güncelle</h2>
+            <div id="modal-body"></div>
+            <form id="update-status-form">
+                <h3>Yeni Durum Ekle</h3>
+                <input type="hidden" id="update-tracking-id">
+                <input type="text" id="new-status-location" placeholder="Yeni Konum" required>
+                <input type="text" id="new-status-description" placeholder="Yeni Açıklama" required>
+                <select id="new-status-icon" required>
+                    <option value="fa-solid fa-box-archive">Kargo Kabul Edildi</option>
+                    <option value="fa-solid fa-warehouse">Transfer Merkezinde</option>
+                    <option value="fa-solid fa-truck">Dağıtımda</option>
+                    <option value="fa-solid fa-box-check">Teslim Edildi</option>
+                </select>
+                <button type="submit">Durumu Güncelle</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hızlı Kargo. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 10px;">
+                <a href="personel-login.html" style="color: #aaa; font-size: 0.9rem; text-decoration: underline;">Personel Girişi</a>
+            </p>
+        </div>
+    </footer>
+    <script src="../js/personel.js"></script>
+</body>
+</html>

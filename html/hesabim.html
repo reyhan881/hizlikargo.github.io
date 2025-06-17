@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesabım - Hızlı Kargo</title>
+    <link rel="stylesheet" href="../css/hesabim.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo"><i class="fa-solid fa-truck-fast"></i> Hızlı Kargo</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="kampanyalar.html">Kampanyalar</a></li>
+                    <li><a href="fiyat-hesapla.html">Fiyat Hesapla</a></li>
+                    <li><a href="subelerimiz.html">Şubelerimiz</a></li>
+                    <li><a href="sss.html">SSS</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="sepet.html" class="cart-icon-link"><i class="fa-solid fa-cart-shopping"></i> <span id="cart-item-count" class="cart-item-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div id="auth-buttons" class="auth-buttons-container">
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container page-content">
+            <h1 id="welcome-message">Hesabım</h1>
+            <p>Kargo puanlarınızı, sadakat puanlarınızı ve referans kodunuzu buradan takip edebilirsiniz.</p>
+
+            <div class="account-grid">
+                <div class="account-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-coins"></i>
+                        <h3>Kargo Puanlarım</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="big-text" id="cargo-points">Yükleniyor...</p>
+                        <p>Bir sonraki gönderinizde kullanabileceğiniz TL değerindeki puanlarınız.</p>
+                    </div>
+                </div>
+
+                <div class="account-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-award"></i>
+                        <h3>Sadakat Puanlarım</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="big-text" id="loyalty-points">Yükleniyor...</p>
+                        <p>Hızlı Kargo'yu tercih ettikçe kazandığınız sadakat puanları.</p>
+                    </div>
+                </div>
+
+                <div class="account-card">
+                    <div class="card-header">
+                        <i class="fa-solid fa-user-group"></i>
+                        <h3>Referans Kodum</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="big-text" id="referral-code">Yükleniyor...</p>
+                        <p>Bu kodu arkadaşlarınla paylaşarak ek puanlar kazan!</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="account-card full-width">
+                    <div class="card-header">
+                        <i class="fa-solid fa-truck-ramp-box"></i>
+                        <h3>Oluşturduğum Kargolar</h3>
+                    </div>
+                    <div class="card-body" id="my-shipments-list">
+                        <p>Yükleniyor...</p>
+                        </div>
+                </div>
+                </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hızlı Kargo. Tüm hakları saklıdır.</p>
+            <p style="margin-top: 10px;">
+                <a href="personel-login.html" style="color: #aaa; font-size: 0.9rem; text-decoration: underline;">Personel Girişi</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/hesabim.js"></script>
+</body>
+</html>

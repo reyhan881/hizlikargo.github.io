@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sepetim - Hızlı Kargo</title>
+    <link rel="stylesheet" href="../css/fiyat-hesapla.css"> <link rel="stylesheet" href="../css/sepet.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html" class="logo"><i class="fa-solid fa-truck-fast"></i> Hızlı Kargo</a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Ana Sayfa</a></li>
+                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                    <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="kampanyalar.html">Kampanyalar</a></li>
+                    <li><a href="fiyat-hesapla.html">Fiyat Hesapla</a></li>
+                    <li><a href="sss.html">SSS</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="sepet.html" class="active cart-icon-link"><i class="fa-solid fa-cart-shopping"></i> <span id="cart-item-count" class="cart-item-count">0</span></a></li>
+                </ul>
+            </nav>
+            <div id="auth-buttons" class="auth-buttons-container"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container page-content">
+            <h1>Sepetim</h1>
+            <p>Gönderi oluşturmak istediğiniz kargoları buradan yönetebilirsiniz.</p>
+
+            <div id="cart-items-container">
+                </div>
+
+            <div id="cart-summary" style="display: none;">
+                <hr>
+                <div class="summary-line">
+                    <span>Toplam Kargo Sayısı:</span>
+                    <span id="total-items">0</span>
+                </div>
+                <div class="summary-line total-price">
+                    <span>Genel Toplam:</span>
+                    <span id="grand-total">0.00 TL</span>
+                </div>
+                <button id="checkout-btn" class="submit-btn">ÖDEME YAP</button>
+            </div>
+
+            <div id="empty-cart-message" class="info-message" style="display: none;">
+                <p>Sepetinizde henüz kargo bulunmamaktadır. <a href="fiyat-hesapla.html">Hemen bir kargo hesaplayıp ekleyin!</a></p>
+            </div>
+
+            <div id="payment-success-message" class="info-message success" style="display: none;">
+                <p><i class="fa-solid fa-circle-check"></i> Ödeme başarılı! Kargolarınız oluşturuldu ve takip numaraları hesabınıza tanımlandı. Hesabım sayfanızdan takip edebilirsiniz.</p>
+                <a href="hesabim.html" class="btn-primary">Hesabım Sayfasına Git</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Hızlı Kargo. Tüm hakları saklıdır.</p>
+
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/sepet.js"></script>
+</body>
+</html>
